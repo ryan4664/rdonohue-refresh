@@ -31,7 +31,7 @@ export default function Home() {
           borderRadius="400px"
           boxSize="400px"
           alt="Ryan Donohue"
-          marginTop="10"
+          marginTop="15"
         />
       </Flex>
 
