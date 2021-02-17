@@ -16,6 +16,8 @@ export default function Home() {
       <Head>
         <title>Ryan Donohue - rdonohue.ca</title>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600" rel="stylesheet" />
       </Head>
 
       <Flex
@@ -28,7 +30,8 @@ export default function Home() {
           fontSize="4rem"
           lineHeight={1.15}
           margin={0}
-          fontFamily="Segoe UI"
+          textAlign="center"
+          fontWeight={500}
         >
           Ryan Donohue
         </Text>
@@ -70,21 +73,6 @@ export default function Home() {
       >
         <Text>Made by Ryan Donohue</Text>
       </Flex>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
     </Flex>
   );
 }
