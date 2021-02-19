@@ -13,7 +13,7 @@ const InfoBox = ({ title, body, imagePath, reverse = false }: IProps) => {
       direction={reverse ? "row-reverse" : "row"}
       align="center"
       justify="space-around"
-      width="50vw"
+      width="60vw"
       background="gray.300"
       padding="4"
       borderRadius="lg"

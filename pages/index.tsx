@@ -17,7 +17,10 @@ export default function Home() {
         <title>Ryan Donohue - rdonohue.ca</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600"
+          rel="stylesheet"
+        />
       </Head>
 
       <Flex
@@ -46,6 +49,16 @@ export default function Home() {
       </Flex>
 
       <VStack spacing={10}>
+        <Text
+          fontSize="3rem"
+          lineHeight={1.15}
+          margin={0}
+          textAlign="center"
+          fontWeight={500}
+        >
+          Bout Me
+        </Text>
+
         <InfoBox
           title="Who Am I?"
           body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum cursus augue, et fermentum elit malesuada eget. Maecenas vehicula lacus eu ex finibus congue."
@@ -58,9 +71,47 @@ export default function Home() {
           imagePath="./assets/me-n-pat.jpg"
           reverse
         />
-
-        <ContactForm />
       </VStack>
+
+      <VStack spacing={10}>
+        <Text
+          fontSize="3rem"
+          lineHeight={1.15}
+          margin={0}
+          textAlign="center"
+          fontWeight={500}
+        >
+          Bout Work
+        </Text>
+
+        <InfoBox
+          title="54e Dev Studios"
+          body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum cursus augue, et fermentum elit malesuada eget. Maecenas vehicula lacus eu ex finibus congue."
+          imagePath="./assets/54e.webp"
+        />
+
+        <InfoBox
+          title="Outpost Health"
+          body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum cursus augue, et fermentum elit malesuada eget. Maecenas vehicula lacus eu ex finibus congue."
+          imagePath="./assets/outpost.svg"
+          reverse
+        />
+
+        <InfoBox
+          title="Brew Ninja"
+          body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum cursus augue, et fermentum elit malesuada eget. Maecenas vehicula lacus eu ex finibus congue."
+          imagePath="./assets/brewninja.png"
+        />
+
+        <InfoBox
+          title="Vivvo"
+          body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum cursus augue, et fermentum elit malesuada eget. Maecenas vehicula lacus eu ex finibus congue."
+          imagePath="./assets/vivvo.svg"
+          reverse
+        />
+      </VStack>
+
+      <ContactForm />
 
       <Flex
         w="100%"
