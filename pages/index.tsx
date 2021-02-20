@@ -23,6 +23,7 @@ export default function Home() {
       justify="center"
       align="center"
       background="gray.100"
+      padding={[2, 0]}
     >
       <Head>
         <title>Ryan Donohue - rdonohue.ca</title>

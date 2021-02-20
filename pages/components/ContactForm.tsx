@@ -9,11 +9,11 @@ const ContactForm = ({}: IProps) => {
       direction="column"
       align="center"
       justify="space-around"
-      width="50vw"
-      padding="4"
+      width={["100%", "80vw", "90vw", "50vw"]}
+      padding={[0, 0, 0, 4]}
       borderRadius="lg"
     >
-      <Stack spacing={3} width="50%">
+      <Stack spacing={3} width={["100%", "100%", "100%", "50%"]}>
         <Input placeholder="Your Name" background="whiteAlpha.800" />
         <Input placeholder="Your Email" background="whiteAlpha.800" />
         <Textarea
