@@ -5,27 +5,37 @@ interface IProps {
   body: string;
   imagePath: string;
   reverse?: boolean;
+  circleImage?: boolean;
 }
 
-const InfoBox = ({ title, body, imagePath, reverse = false }: IProps) => {
+const InfoBox = ({
+  title,
+  body,
+  imagePath,
+  reverse = false,
+  circleImage = false,
+}: IProps) => {
   return (
     <Flex
       align="center"
       flexDirection={["column", reverse ? "row-reverse" : "row"]}
       justify="space-around"
       width={["100%", "80vw", "90vw", "60vw"]}
-      padding="4"
       borderRadius="lg"
+      marginBottom={[4, 0]}
     >
       <Img
         src={imagePath}
-        borderRadius="200px"
-        boxSize="200px"
+        width={"20%"}
         alt="Ryan Donohue"
-        boxShadow="dark-lg"
+        objectFit="contain"
+        borderRadius={circleImage ? "200px" : 0}
+        display={["none", "flex"]}
       />
       <Flex direction="column" flex={1} maxW="70%">
-        <Text color="gray.50" fontSize="2xl">{title}</Text>
+        <Text color="gray.50" fontSize="4xl" textAlign={["center", "left"]}>
+          {title}
+        </Text>
         <Text color="gray.50">{body}</Text>
       </Flex>
     </Flex>

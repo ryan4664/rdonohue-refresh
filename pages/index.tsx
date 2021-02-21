@@ -34,19 +34,16 @@ export default function Home() {
         />
       </Head>
 
-      <Flex
-        align="center"
-        justify="center"
-        direction="column"
-      >
+      <Flex align="center" justify="center" direction="column" py={10}>
         <Img
           src="./assets/ryan-cropped.jpg"
           borderRadius="300px"
           boxSize="300px"
           alt="Ryan Donohue"
           boxShadow="dark-lg"
+          mb={2}
         />
-        <Text fontSize="5xl" textAlign="center">
+        <Text fontSize="5xl" textAlign="center" mb={2}>
           Ryan Donohue
         </Text>
         <Text fontSize="2xl" textAlign="center">
@@ -54,38 +51,39 @@ export default function Home() {
         </Text>
       </Flex>
 
-      <VStack spacing={10} background="gray.400" width="full">
+      <VStack background="gray.400" width="full" py={10} spacing={20}>
         <Text fontSize="4xl" textAlign="center" color="gray.50">
           Work
         </Text>
 
         <InfoBox
-          title="54e Dev Studios"
-          body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum cursus augue, et fermentum elit malesuada eget. Maecenas vehicula lacus eu ex finibus congue."
-          imagePath="./assets/54e.webp"
+          title="54e Dev Studios / OneShot Golf"
+          body="Robotics and Gaming brought together using our proprietary real-time video technologies for a true-to-life Esports experience. "
+          imagePath="./assets/osg.png"
         />
 
         <InfoBox
           title="Outpost Health"
-          body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum cursus augue, et fermentum elit malesuada eget. Maecenas vehicula lacus eu ex finibus congue."
+          body="We are a Physician-led, global virtual healthcare organization, born in Canada."
           imagePath="./assets/outpost.svg"
           reverse
         />
 
         <InfoBox
           title="Brew Ninja"
-          body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum cursus augue, et fermentum elit malesuada eget. Maecenas vehicula lacus eu ex finibus congue."
+          body="Brew Ninja provides full traceability from costing to regulatory lot-tracking."
           imagePath="./assets/brewninja.png"
         />
 
         <InfoBox
           title="Vivvo"
-          body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum cursus augue, et fermentum elit malesuada eget. Maecenas vehicula lacus eu ex finibus congue."
-          imagePath="./assets/vivvo.svg"
+          body="Vivvo is a Canadian software company founded in 2015. After discovering the limitations of working with available software for identity and access management, we started on our own path developing software that aligns with our vision for how to address the challenges of managing the trust and privacy layer in business."
+          imagePath="./assets/vivvo.jpg"
           reverse
+          circleImage
         />
       </VStack>
-      <VStack spacing={10} background="gray.600" width="full">
+      <VStack background="gray.600" width="full" py={10} spacing={20}>
         <Text fontSize="4xl" textAlign="center" color="gray.50">
           Bout Me
         </Text>
@@ -94,6 +92,7 @@ export default function Home() {
           title="Who Am I?"
           body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum cursus augue, et fermentum elit malesuada eget. Maecenas vehicula lacus eu ex finibus congue."
           imagePath="./assets/whoamicropped.jpg"
+          circleImage
         />
 
         <InfoBox
@@ -101,6 +100,7 @@ export default function Home() {
           body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum cursus augue, et fermentum elit malesuada eget. Maecenas vehicula lacus eu ex finibus congue."
           imagePath="./assets/me-n-pat.jpg"
           reverse
+          circleImage
         />
       </VStack>
 
