@@ -8,10 +8,9 @@ const ContactForm = ({}: IProps) => {
     <Flex
       direction="column"
       align="center"
+      background="gray.800"
       justify="space-around"
-      width={["100%", "80vw", "90vw", "50vw"]}
-      padding={[0, 0, 0, 4]}
-      borderRadius="lg"
+      width="full"
     >
       <Stack spacing={3} width={["100%", "100%", "100%", "50%"]}>
         <Input placeholder="Your Name" background="whiteAlpha.800" />

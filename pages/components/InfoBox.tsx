@@ -14,19 +14,19 @@ const InfoBox = ({ title, body, imagePath, reverse = false }: IProps) => {
       flexDirection={["column", reverse ? "row-reverse" : "row"]}
       justify="space-around"
       width={["100%", "80vw", "90vw", "60vw"]}
-      background="gray.300"
       padding="4"
       borderRadius="lg"
     >
       <Img
         src={imagePath}
-        borderRadius="250px"
-        boxSize="250px"
+        borderRadius="200px"
+        boxSize="200px"
         alt="Ryan Donohue"
+        boxShadow="dark-lg"
       />
-      <Flex direction="column" flex={1} maxW={["100%", "50%"]}>
-        <Text fontSize="2xl">{title}</Text>
-        <Text>{body}</Text>
+      <Flex direction="column" flex={1} maxW="70%">
+        <Text color="gray.50" fontSize="2xl">{title}</Text>
+        <Text color="gray.50">{body}</Text>
       </Flex>
     </Flex>
   );

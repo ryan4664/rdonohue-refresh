@@ -22,8 +22,7 @@ export default function Home() {
       direction="column"
       justify="center"
       align="center"
-      background="gray.100"
-      padding={[2, 0]}
+      background="grey.50"
     >
       <Head>
         <title>Ryan Donohue - rdonohue.ca</title>
@@ -39,101 +38,71 @@ export default function Home() {
         align="center"
         justify="center"
         direction="column"
-        marginBottom={10}
       >
-        <Text
-          fontSize="4rem"
-          lineHeight={1.15}
-          margin={0}
-          textAlign="center"
-          fontWeight={500}
-        >
-          Ryan Donohue
-        </Text>
-
         <Img
           src="./assets/ryan-cropped.jpg"
-          borderRadius="400px"
-          boxSize="400px"
+          borderRadius="300px"
+          boxSize="300px"
           alt="Ryan Donohue"
-          marginTop={10}
+          boxShadow="dark-lg"
         />
+        <Text fontSize="5xl" textAlign="center">
+          Ryan Donohue
+        </Text>
+        <Text fontSize="2xl" textAlign="center">
+          Software Developer
+        </Text>
       </Flex>
 
-      <Tabs isFitted variant="enclosed">
-        <TabList>
-          <Tab>Work</Tab>
-          <Tab>Personal</Tab>
-        </TabList>
+      <VStack spacing={10} background="gray.400" width="full">
+        <Text fontSize="4xl" textAlign="center" color="gray.50">
+          Work
+        </Text>
 
-        <TabPanels>
-          <TabPanel>
-            <VStack spacing={10}>
-              <Text
-                fontSize="3rem"
-                lineHeight={1.15}
-                margin={0}
-                textAlign="center"
-                fontWeight={500}
-              >
-                Bout Work
-              </Text>
+        <InfoBox
+          title="54e Dev Studios"
+          body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum cursus augue, et fermentum elit malesuada eget. Maecenas vehicula lacus eu ex finibus congue."
+          imagePath="./assets/54e.webp"
+        />
 
-              <InfoBox
-                title="54e Dev Studios"
-                body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum cursus augue, et fermentum elit malesuada eget. Maecenas vehicula lacus eu ex finibus congue."
-                imagePath="./assets/54e.webp"
-              />
+        <InfoBox
+          title="Outpost Health"
+          body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum cursus augue, et fermentum elit malesuada eget. Maecenas vehicula lacus eu ex finibus congue."
+          imagePath="./assets/outpost.svg"
+          reverse
+        />
 
-              <InfoBox
-                title="Outpost Health"
-                body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum cursus augue, et fermentum elit malesuada eget. Maecenas vehicula lacus eu ex finibus congue."
-                imagePath="./assets/outpost.svg"
-                reverse
-              />
+        <InfoBox
+          title="Brew Ninja"
+          body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum cursus augue, et fermentum elit malesuada eget. Maecenas vehicula lacus eu ex finibus congue."
+          imagePath="./assets/brewninja.png"
+        />
 
-              <InfoBox
-                title="Brew Ninja"
-                body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum cursus augue, et fermentum elit malesuada eget. Maecenas vehicula lacus eu ex finibus congue."
-                imagePath="./assets/brewninja.png"
-              />
+        <InfoBox
+          title="Vivvo"
+          body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum cursus augue, et fermentum elit malesuada eget. Maecenas vehicula lacus eu ex finibus congue."
+          imagePath="./assets/vivvo.svg"
+          reverse
+        />
+      </VStack>
+      <VStack spacing={10} background="gray.600" width="full">
+        <Text fontSize="4xl" textAlign="center" color="gray.50">
+          Bout Me
+        </Text>
 
-              <InfoBox
-                title="Vivvo"
-                body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum cursus augue, et fermentum elit malesuada eget. Maecenas vehicula lacus eu ex finibus congue."
-                imagePath="./assets/vivvo.svg"
-                reverse
-              />
-            </VStack>
-          </TabPanel>
-          <TabPanel>
-            <VStack spacing={10}>
-              <Text
-                fontSize="3rem"
-                lineHeight={1.15}
-                margin={0}
-                textAlign="center"
-                fontWeight={500}
-              >
-                Bout Me
-              </Text>
+        <InfoBox
+          title="Who Am I?"
+          body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum cursus augue, et fermentum elit malesuada eget. Maecenas vehicula lacus eu ex finibus congue."
+          imagePath="./assets/whoamicropped.jpg"
+        />
 
-              <InfoBox
-                title="Who Am I?"
-                body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum cursus augue, et fermentum elit malesuada eget. Maecenas vehicula lacus eu ex finibus congue."
-                imagePath="./assets/whoamicropped.jpg"
-              />
-
-              <InfoBox
-                title="What Do I Do?"
-                body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum cursus augue, et fermentum elit malesuada eget. Maecenas vehicula lacus eu ex finibus congue."
-                imagePath="./assets/me-n-pat.jpg"
-                reverse
-              />
-            </VStack>
-          </TabPanel>
-        </TabPanels>
-      </Tabs>
+        <InfoBox
+          title="What Do I Do?"
+          body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum cursus augue, et fermentum elit malesuada eget. Maecenas vehicula lacus eu ex finibus congue."
+          imagePath="./assets/me-n-pat.jpg"
+          reverse
+        />
+      </VStack>
 
       <ContactForm />
 
@@ -144,7 +113,6 @@ export default function Home() {
         borderColor="gray.300"
         justify="center"
         align="center"
-        marginTop={10}
       >
         <Text>Made by Ryan Donohue</Text>
       </Flex>
