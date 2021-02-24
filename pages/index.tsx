@@ -51,7 +51,7 @@ export default function Home() {
         </Text>
       </Flex>
 
-      <VStack background="gray.400" width="full" py={10} spacing={20}>
+      <VStack background="gray.400" width="full" py={10} spacing={[5, 20]}>
         <Text fontSize="4xl" textAlign="center" color="gray.50">
           Work
         </Text>
@@ -83,7 +83,7 @@ export default function Home() {
           circleImage
         />
       </VStack>
-      <VStack background="gray.600" width="full" py={10} spacing={20}>
+      <VStack background="gray.600" width="full" py={10} spacing={[5, 20]}>
         <Text fontSize="4xl" textAlign="center" color="gray.50">
           Bout Me
         </Text>
