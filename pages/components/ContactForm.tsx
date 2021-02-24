@@ -14,6 +14,7 @@ const ContactForm = ({}: IProps) => {
   const [name, setName] = useState<string>("");
   const [fromEmail, setFromEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const onSendEmail = async () => {
     let body: IEmailMessage = {
@@ -22,14 +23,20 @@ const ContactForm = ({}: IProps) => {
       message: message,
     };
 
-    // Default options are marked with *
-    const response = await fetch("/api/sendMail", {
-      method: "POST",
-      body: JSON.stringify(body),
-    });
+    setIsLoading(true);
 
-    let res = await response.json();
-    console.log(res);
+    try {
+      const response = await fetch("/api/sendMail", {
+        method: "POST",
+        body: JSON.stringify(body),
+      });
+
+      if (response.status === 200) {
+      }
+    } catch (error) {
+      console.log(error);
+    }
+    setIsLoading(false);
   };
 
   return (

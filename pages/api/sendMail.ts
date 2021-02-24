@@ -11,17 +11,17 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
   let body = JSON.parse(req.body);
 
   const data = {
-    from: `${body.fromEmail}`,
+    from: `${body.name} <${body.fromEmail}>`,
     to: "ryan@rdonohue.ca",
-    subject: 'Hello',
-    text: 'Testing some Mailgun awesomness!'
+    subject: 'Email from ya site!',
+    text: body.message
   };
 
   console.log(data)
 
   mg.messages().send(data, function (error, body) {
     console.log(body);
-    console.log({ ...error });
+    console.log(error);
   });
 
   res.status(200).json({});
