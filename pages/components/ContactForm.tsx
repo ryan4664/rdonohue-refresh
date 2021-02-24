@@ -1,18 +1,35 @@
 import { EmailIcon } from "@chakra-ui/icons";
 import { Button, Flex, Input, Stack, Textarea } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
 
 interface IProps {}
 
+interface IEmailMessage {
+  name: string;
+  fromEmail: string;
+  message: string;
+}
+
 const ContactForm = ({}: IProps) => {
+  const [name, setName] = useState<string>("");
+  const [fromEmail, setFromEmail] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
+
   const onSendEmail = async () => {
-    let data = {};
+    let body: IEmailMessage = {
+      name: name,
+      fromEmail: fromEmail,
+      message: message,
+    };
 
     // Default options are marked with *
-    const response = await fetch("/api/sendMail");
+    const response = await fetch("/api/sendMail", {
+      method: "POST",
+      body: JSON.stringify(body),
+    });
 
-    let test = await response.json();
-
-    console.log("TEST", test);
+    let res = await response.json();
+    console.log(res);
   };
 
   return (
@@ -25,14 +42,28 @@ const ContactForm = ({}: IProps) => {
       py={10}
     >
       <Stack spacing={3} width={["100%", "100%", "100%", "50%"]}>
-        <Input placeholder="Name" background="grey.50" />
-        <Input placeholder="Email" background="grey.50" />
+        <Input
+          placeholder="Name"
+          background="grey.50"
+          onChange={(e) => setName(e.target.value)}
+        />
+        <Input
+          placeholder="Email"
+          background="grey.50"
+          onChange={(e) => setFromEmail(e.target.value)}
+        />
         <Textarea
           placeholder="Your message"
           resize="none"
           background="grey.50"
+          onChange={(e) => setMessage(e.target.value)}
         />
-        <Button onClick={onSendEmail} leftIcon={<EmailIcon />} colorScheme="blue" variant="solid">
+        <Button
+          onClick={onSendEmail}
+          leftIcon={<EmailIcon />}
+          colorScheme="blue"
+          variant="solid"
+        >
           Email
         </Button>
       </Stack>
