@@ -34,7 +34,7 @@ export default function Home() {
         />
       </Head>
 
-      <Flex align="center" justify="center" direction="column" py={10}>
+      <Flex align="center" justify="center" direction="column" py={10} height={["100vh", "50vh"]}>
         <Img
           src="./assets/ryan-cropped.jpg"
           borderRadius="300px"
@@ -90,18 +90,18 @@ export default function Home() {
 
         <InfoBox
           title="Who Am I?"
-          body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum cursus augue, et fermentum elit malesuada eget. Maecenas vehicula lacus eu ex finibus congue."
+          body="My name is Ryan Donohue and I'm a fullstack software developer from Regina, Saskatchewan."
           imagePath="./assets/whoamicropped.jpg"
           circleImage
         />
 
-        <InfoBox
+        {/* <InfoBox
           title="What Do I Do?"
           body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum cursus augue, et fermentum elit malesuada eget. Maecenas vehicula lacus eu ex finibus congue."
           imagePath="./assets/me-n-pat.jpg"
           reverse
           circleImage
-        />
+        /> */}
       </VStack>
 
       <ContactForm />
