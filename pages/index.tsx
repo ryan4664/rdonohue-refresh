@@ -36,7 +36,7 @@ export default function Home() {
 
       <Flex align="center" justify="center" direction="column" py={20} height={["100vh"]} width={"100%"} background="gray.200">
         <Img
-          src="./assets/ryan-cropped.jpg"
+          src="./assets/ryan-cropped-2.jpg"
           borderRadius="300px"
           boxSize="300px"
           alt="Ryan Donohue"
