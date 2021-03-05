@@ -22,7 +22,7 @@ export default function Home() {
       direction="column"
       justify="center"
       align="center"
-      background="grey.50"
+      backgroundColor="grey.200"
     >
       <Head>
         <title>Ryan Donohue - rdonohue.ca</title>
@@ -34,7 +34,7 @@ export default function Home() {
         />
       </Head>
 
-      <Flex align="center" justify="center" direction="column" py={10} height={["100vh", "50vh"]}>
+      <Flex align="center" justify="center" direction="column" py={20} height={["100vh"]} width={"100%"} background="gray.200">
         <Img
           src="./assets/ryan-cropped.jpg"
           borderRadius="300px"
@@ -49,9 +49,12 @@ export default function Home() {
         <Text fontSize="2xl" textAlign="center">
           Software Developer
         </Text>
+        <Text fontSize="2xl" textAlign="center">
+          Chill Guy
+        </Text>
       </Flex>
 
-      <VStack background="gray.400" width="full" py={10} spacing={[5, 20]}>
+      <VStack background="gray.600" width="full" py={10} spacing={[5, 20]}>
         <Text fontSize="4xl" textAlign="center" color="gray.50">
           Work
         </Text>
@@ -83,7 +86,7 @@ export default function Home() {
           circleImage
         />
       </VStack>
-      <VStack background="gray.600" width="full" py={10} spacing={[5, 20]}>
+      <VStack background="gray.700" width="full" py={10} spacing={[5, 20]}>
         <Text fontSize="4xl" textAlign="center" color="gray.50">
           Bout Me
         </Text>
