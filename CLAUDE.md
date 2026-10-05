@@ -21,7 +21,7 @@ Ryan Donohue's personal site. One static page: `public/index.html`, with all CSS
 
 ## Status (2026-10-04)
 
-- The redesign is finished and passed Impeccable's finish review (ship). None of it is committed yet.
+- The redesign is finished and passed Impeccable's finish review (ship). It's committed and pushed on branch `terminal-redesign`, not merged to `main` yet.
 - **Not deployed.** rdonohue.ca currently returns Vercel `DEPLOYMENT_NOT_FOUND`.
   - The Vercel CLI is logged into `ryan-3918` (teams `rdonohuenustim`, `nu-stimulus`). Ryan says that's the wrong (Nu Stimulus) account, so don't deploy there.
   - Next: `npx vercel logout && npx vercel login` with Ryan's personal account, then `npx vercel --prod`, then attach `rdonohue.ca` and `www.rdonohue.ca` to the project.
