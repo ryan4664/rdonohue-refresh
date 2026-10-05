@@ -19,10 +19,9 @@ Ryan Donohue's personal site. One static page: `public/index.html`, with all CSS
 - Contact is a mailto link to ryan@rdonohue.ca. No form, no backend.
 - Nobody should ever have to type a command on the page. Everything is printed, and links are plain links.
 
-## Status (2026-10-04)
+## Deploy
 
-- The redesign is finished and passed Impeccable's finish review (ship). It's merged and pushed to `main`.
-- **Not deployed.** rdonohue.ca currently returns Vercel `DEPLOYMENT_NOT_FOUND`.
-  - The Vercel CLI is logged into `ryan-3918` (teams `rdonohuenustim`, `nu-stimulus`). Ryan says that's the wrong (Nu Stimulus) account, so don't deploy there.
-  - Next: `npx vercel logout && npx vercel login` with Ryan's personal account, then `npx vercel --prod`, then attach `rdonohue.ca` and `www.rdonohue.ca` to the project.
-  - DNS: registrar NameSilo, nameservers at Varial Hosting. The A record already points to Vercel (76.76.21.21), and www is a CNAME to the apex. If another Vercel account still claims the domain, Vercel will ask for a TXT record at Varial.
+- Vercel project `rdonohue-refresh` on Ryan's personal account (`ryan4664`, team `ryan-donohues-projects`), connected to GitHub: every push to `main` deploys to production.
+- Domains: `rdonohue.ca` and `www.rdonohue.ca`, live since 2026-10-05.
+- Don't deploy to `nu-stimulus` or the `ryan-3918` login; those are Nu Stimulus work accounts.
+- DNS: registrar NameSilo, nameservers at Varial Hosting. The A record is 76.76.21.21, which works; Vercel recommends switching to 216.198.79.1 / 64.29.17.1 when convenient.
