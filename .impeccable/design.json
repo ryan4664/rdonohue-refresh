@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-05T13:49:39+00:00",
+  "generatedAt": "2026-10-05T13:51:21+00:00",
   "title": "Design System: rdonohue.ca",
   "extensions": {
     "colorMeta": {
@@ -77,21 +77,6 @@
           "#79b58d",
           "#9cdab0",
           "#c1ffd5"
-        ]
-      },
-      "bright-green": {
-        "role": "primary",
-        "displayName": "Bright Sage (tmux hover)",
-        "canonical": "oklch(82.6% 0.070 154.4)",
-        "tonalRamp": [
-          "#001200",
-          "#002e15",
-          "#1f4d31",
-          "#3f6d4f",
-          "#608f70",
-          "#83b292",
-          "#a6d7b5",
-          "#cbfdda"
         ]
       },
       "yellow": {
@@ -171,10 +156,6 @@
       "body": {
         "displayName": "Body",
         "purpose": "All running text; intro prose 62ch, log bullets 72ch, log 90ch."
-      },
-      "label": {
-        "displayName": "Label",
-        "purpose": "tmux status line; 12px at 75% width at 640px and below."
       }
     },
     "shadows": [],
@@ -187,19 +168,14 @@
       {
         "name": "instant",
         "value": "none",
-        "purpose": "Every other state change (link hover, tmux window) is instant."
+        "purpose": "Every other state change (link hover) is instant."
       }
     ],
     "breakpoints": [
       {
         "name": "narrow",
         "value": "640px",
-        "purpose": "intro stacks, photo 240px, log date gutter stacks, tmux 12px/75% width, session name hidden"
-      },
-      {
-        "name": "tiny",
-        "value": "400px",
-        "purpose": "tmux location hidden"
+        "purpose": "intro stacks, photo 240px, log date gutter stacks"
       }
     ],
     "assets": [
@@ -253,19 +229,11 @@
       "description": "Contact email at headline size in bright white, followed by the green blinking block cursor.",
       "html": "<p class=\"ds-mail\"><a href=\"#\">ryan@rdonohue.ca</a><span class=\"ds-cursor\" aria-hidden=\"true\"></span></p>",
       "css": ".ds-mail{font-family:'Martian Mono',ui-monospace,Menlo,monospace;margin:0;padding:16px;background:var(--bg,#0d0f11);font-size:clamp(1.5rem,0.8rem + 2.6vw,2.9rem);font-stretch:112.5%;font-weight:760;line-height:1.1;letter-spacing:-0.02em;overflow-wrap:anywhere;}.ds-mail a{color:var(--bright-white,#f5f6f7);text-decoration:underline;text-decoration-color:var(--dim,#7d858d);text-decoration-thickness:0.06em;text-underline-offset:0.25em;}.ds-mail a:hover{color:var(--cyan,#63d0c4);text-decoration-color:var(--cyan,#63d0c4);}.ds-mail a:focus-visible{outline:2px solid var(--cyan,#63d0c4);outline-offset:3px;}.ds-cursor{display:inline-block;width:0.55em;height:0.95em;margin-left:0.25ch;vertical-align:-0.1em;background:var(--green,#86c39a);animation:ds-blink 1.06s steps(1) infinite;}@keyframes ds-blink{50%{opacity:0;}}@media (prefers-reduced-motion:reduce){.ds-cursor{animation:none;}}"
-    },
-    {
-      "name": "tmux status line",
-      "kind": "nav",
-      "refersTo": "tmux-bar",
-      "description": "Green bottom bar; windows as plain links; active window inverted with a trailing *; Regina clock on the right.",
-      "html": "<nav class=\"ds-tmux\"><span>[rdonohue]</span><a href=\"#\" aria-current=\"location\">0:about</a><a href=\"#\">1:work</a><a href=\"#\">2:contact</a><span class=\"ds-right\">\"regina, sk\" 21:40</span></nav>",
-      "css": ".ds-tmux{font-family:'Martian Mono',ui-monospace,Menlo,monospace;font-stretch:87.5%;display:flex;align-items:center;gap:1ch;height:2rem;padding:0 1ch;background:var(--green,#86c39a);color:var(--bg,#0d0f11);font-size:13px;white-space:nowrap;}.ds-tmux a{color:inherit;text-decoration:none;padding:0 0.5ch;}.ds-tmux a::after{content:\" \";}.ds-tmux a[aria-current]::after{content:\"*\";}.ds-tmux a[aria-current]{background:var(--bg,#0d0f11);color:var(--green,#86c39a);font-weight:700;}.ds-tmux a:hover{background:var(--bright-green,#a3d4b2);color:var(--bg,#0d0f11);}.ds-tmux a[aria-current]:hover{background:var(--bg,#0d0f11);color:var(--green,#86c39a);}.ds-tmux a:focus-visible{outline:2px solid var(--bg,#0d0f11);outline-offset:-2px;}.ds-right{margin-left:auto;}"
     }
   ],
   "narrative": {
     "northStar": "The Quiet Session",
-    "overview": "The page reads like a fullscreen terminal that someone has tidied up. Nothing is typed and no commands are shown. The terminal feel comes from a small set of materials: one monospace family, ANSI role colours on near-black, `# section` headings with a magenta hash, a work log with a yellow date gutter, a green block cursor blinking after the contact email, and a tmux status line pinned to the bottom that handles navigation.\n\nThe world is dense and quiet: one left-aligned column on near-black. Rank comes from the variable font's width and weight axes, not from a second face. The photo is Ryan's own, shown plainly at full fidelity. There are no surfaces, cards, shadows or rounded corners. The character grid sets the layout.\n\nThe terminal is dialled back on purpose. It has no glow, no window chrome and no traffic-light buttons, and no shell prompts or command lines. It fills the viewport like a session, not a screenshot of an app.",
+    "overview": "The page reads like a fullscreen terminal that someone has tidied up. Nothing is typed and no commands are shown. The terminal feel comes from a small set of materials: one monospace family, ANSI role colours on near-black, `# section` headings with a magenta hash, a work log with a yellow date gutter, and a green block cursor blinking after the contact email. The page is one static document: no navigation chrome and no JavaScript.\n\nThe world is dense and quiet: one left-aligned column on near-black. Rank comes from the variable font's width and weight axes, not from a second face. The photo is Ryan's own, shown plainly at full fidelity. There are no surfaces, cards, shadows or rounded corners. The character grid sets the layout.\n\nThe terminal is dialled back on purpose. It has no glow, no window chrome and no traffic-light buttons, and no shell prompts or command lines. It fills the viewport like a session, not a screenshot of an app.",
     "keyCharacteristics": [
       "Dark only.",
       "One family (Martian Mono, variable). The width axis carries rank.",
@@ -276,7 +244,7 @@
     "rules": [
       {
         "name": "The ANSI Roles Rule",
-        "body": "A hue is used only for its one job: green for the session (keys, bar, cursor), yellow for dates, magenta for the heading hash, cyan for interaction, bright white for bold names and headings. A new hue needs a new role first.",
+        "body": "A hue is used only for its one job: green for the session (keys, cursor, selection), yellow for dates, magenta for the heading hash, cyan for interaction, bright white for bold names and headings. A new hue needs a new role first.",
         "section": "colors"
       },
       {
@@ -286,7 +254,7 @@
       },
       {
         "name": "The Width Is Rank Rule",
-        "body": "Rank comes from the width and weight axes, not from new faces: 112.5/760 for the name and email, 87.5/700 for headings and keys, 87.5/400 for text, and 75 only where the status bar runs out of room. Never add a second family.",
+        "body": "Rank comes from the width and weight axes, not from new faces: 112.5/760 for the name and email, 87.5/700 for headings and keys, and 87.5/400 for text. The 75% end of the axis is unused. Never add a second family.",
         "section": "typography"
       },
       {
@@ -312,11 +280,10 @@
     ],
     "dos": [
       "**Do** open new sections with a lowercase `# name` heading: magenta hash, bright-white bold word.",
-      "**Do** pick colours by role: green for keys, the bar and the cursor; yellow for dates; magenta for the heading hash; cyan for interaction; bright white for bold names and headings.",
+      "**Do** pick colours by role: green for keys, the cursor and selection; yellow for dates; magenta for the heading hash; cyan for interaction; bright white for bold names and headings.",
       "**Do** set rank with Martian Mono's width and weight axes: 112.5% and 760 for headline moments, 87.5% for everything else.",
       "**Do** measure horizontal gaps and indents inside content in `ch`.",
-      "**Do** keep motion instant or stepped, and respect `prefers-reduced-motion`.",
-      "**Do** add navigation as tmux windows (`n:name`) in the status bar."
+      "**Do** keep motion instant or stepped, and respect `prefers-reduced-motion`."
     ],
     "donts": [
       "**Don't** add a light theme. The world is dark only.",

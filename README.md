@@ -1,6 +1,6 @@
 # rdonohue.ca
 
-Ryan Donohue's personal site. A dark, monospace page with a terminal feel and a tmux-style status bar for navigation.
+Ryan Donohue's personal site: a dark, monospace page with a light terminal feel.
 
 It's one static page, `public/index.html`, with no build step and no dependencies.
 

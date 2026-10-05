@@ -7,7 +7,6 @@ colors:
   dim: "#7d858d"
   black: "#2a2f35"
   green: "#86c39a"
-  bright-green: "#a3d4b2"
   yellow: "#dcbc82"
   magenta: "#d28ad8"
   cyan: "#63d0c4"
@@ -39,34 +38,13 @@ typography:
     fontWeight: 400
     lineHeight: 1.65
     fontVariation: "'wdth' 87.5"
-  label:
-    fontFamily: "Martian Mono, ui-monospace, Menlo, monospace"
-    fontSize: "13px"
-    fontWeight: 400
-    fontVariation: "'wdth' 87.5"
 spacing:
   gutter: "clamp(16px, 5vw, 72px)"
   section: "5rem"
   heading: "1.75rem"
   entry: "2.25rem"
   paragraph: "1rem"
-  bar: "2rem"
 components:
-  tmux-bar:
-    backgroundColor: "{colors.green}"
-    textColor: "{colors.bg}"
-    typography: "{typography.label}"
-    height: "{spacing.bar}"
-    padding: "0 1ch"
-  tmux-window:
-    textColor: "{colors.bg}"
-    padding: "0 0.5ch"
-  tmux-window-hover:
-    backgroundColor: "{colors.bright-green}"
-    textColor: "{colors.bg}"
-  tmux-window-active:
-    backgroundColor: "{colors.bg}"
-    textColor: "{colors.green}"
   section-heading:
     textColor: "{colors.bright-white}"
     typography: "{typography.title}"
@@ -97,7 +75,7 @@ components:
 
 **Creative North Star: "The Quiet Session"**
 
-The page reads like a fullscreen terminal that someone has tidied up. Nothing is typed and no commands are shown. The terminal feel comes from a small set of materials: one monospace family, ANSI role colours on near-black, `# section` headings with a magenta hash, a work log with a yellow date gutter, a green block cursor blinking after the contact email, and a tmux status line pinned to the bottom that handles navigation.
+The page reads like a fullscreen terminal that someone has tidied up. Nothing is typed and no commands are shown. The terminal feel comes from a small set of materials: one monospace family, ANSI role colours on near-black, `# section` headings with a magenta hash, a work log with a yellow date gutter, and a green block cursor blinking after the contact email. The page is one static document: no navigation chrome and no JavaScript.
 
 The world is dense and quiet: one left-aligned column on near-black. Rank comes from the variable font's width and weight axes, not from a second face. The photo is Ryan's own, shown plainly at full fidelity. There are no surfaces, cards, shadows or rounded corners. The character grid sets the layout.
 
@@ -115,8 +93,7 @@ The terminal is dialled back on purpose. It has no glow, no window chrome and no
 A soft, muted ANSI palette on near-black, where each hue has a fixed job.
 
 ### Primary
-- **Session Sage** (green): a soft sage. It fills the info-list keys, the tmux status bar, the blinking cursor, text selection and the caret, and it is the colour of the session itself. As text on bg, and as bg text on the bar, it measures about 9.4:1.
-- **Bright Sage** (bright-green): only the hover fill on an inactive tmux window (bg text on it about 11.5:1).
+- **Session Sage** (green): a soft sage. It is used for the info-list keys, the blinking cursor, the text-selection fill and the caret, and it is the colour of the session itself. It measures about 9.4:1 against bg, as text on bg and as bg text on a selection.
 
 ### Secondary
 - **Date Sand** (yellow): a warm sand, used for the date gutter in the work log and nothing else (about 10.6:1 on bg).
@@ -126,14 +103,14 @@ A soft, muted ANSI palette on near-black, where each hue has a fixed job.
 - **Heading Magenta** (magenta): only the `#` in section headings.
 
 ### Neutral
-- **Session Black** (bg): the page and `html` background, the theme colour, text on the green tmux bar, and the active-window fill.
+- **Session Black** (bg): the page and `html` background, the theme colour, and selected text on the green selection fill.
 - **Terminal Grey** (fg): running text and the colon after each info key.
 - **Comment Grey** (dim): link underlines at rest, the `- ` list markers, and secondary lines such as a role's location. It measures about 5:1 against bg, so it stays legible.
 - **Bold White** (bright-white): the name, section headings, role headings, company names in the earlier-roles list, and the contact email.
 - **Ansi Black** (black): the scrollbar thumb only.
 
 ### Named Rules
-**The ANSI Roles Rule.** A hue is used only for its one job: green for the session (keys, bar, cursor), yellow for dates, magenta for the heading hash, cyan for interaction, bright white for bold names and headings. A new hue needs a new role first.
+**The ANSI Roles Rule.** A hue is used only for its one job: green for the session (keys, cursor, selection), yellow for dates, magenta for the heading hash, cyan for interaction, bright white for bold names and headings. A new hue needs a new role first.
 
 **The Dark Only Rule.** There is no light theme. `color-scheme: dark` and the bg colour are the only canvas.
 
@@ -149,34 +126,33 @@ A soft, muted ANSI palette on near-black, where each hue has a fixed job.
 - **Headline** (760, clamp 1.5-2.9rem, 1.1, width 112.5%): the contact email, wrapping anywhere when needed.
 - **Title** (700, 1em, width 87.5%): section headings, role headings, info keys and company names. Bold at body size is how a terminal shows emphasis.
 - **Body** (400, clamp 14-17px, 1.65, width 87.5%): all running text. Intro prose is capped at 62ch, log bullets at 72ch and the log at 90ch.
-- **Label** (400, 13px, width 87.5%): the tmux status line. At 640px and below it drops to 12px at 75% width.
 
 ### Named Rules
-**The Width Is Rank Rule.** Rank comes from the width and weight axes, not from new faces: 112.5/760 for the name and email, 87.5/700 for headings and keys, 87.5/400 for text, and 75 only where the status bar runs out of room. Never add a second family.
+**The Width Is Rank Rule.** Rank comes from the width and weight axes, not from new faces: 112.5/760 for the name and email, 87.5/700 for headings and keys, and 87.5/400 for text. The 75% end of the axis is unused. Never add a second family.
 
 **The No Uppercase Rule.** Nothing is uppercased or letter-spaced for effect. Headings are lowercase, as written.
 
 ## Layout
 
-A single left-aligned column with a top-left origin, max-width 1100px, a horizontal gutter of `clamp(16px, 5vw, 72px)` and 2.5rem of top padding. The bottom padding clears the fixed status bar plus 4rem. Sections sit 5rem apart, with a 2rem scroll-margin. A section heading sits 1.75rem above its content. Log entries are 2.25rem apart and paragraphs 1rem.
+A single left-aligned column with a top-left origin, max-width 1100px, a horizontal gutter of `clamp(16px, 5vw, 72px)` and 2.5rem of top padding. The bottom padding is 5rem. Sections sit 5rem apart. A section heading sits 1.75rem above its content. Log entries are 2.25rem apart and paragraphs 1rem.
 
 Inside content, horizontal measures use the character grid: 1ch between a key and its value, a 10ch date gutter with a 2ch gap in the work log, a 2ch hanging indent for `- ` list items, and a 3.5ch column gap between the photo and the intro text.
 
-The intro is a two-column grid (the photo at 320px, then the info). At 640px and below it stacks to one column, the photo shrinks to 240px, and the log's date gutter stacks above each entry. In the status bar, the session name hides at 640px and below and the location hides at 400px and below.
+The intro is a two-column grid (the photo at 320px, then the info). At 640px and below it stacks to one column, the photo shrinks to 240px, and the log's date gutter stacks above each entry.
 
 ### Named Rules
 **The Character Grid Rule.** Horizontal measures inside content are in `ch`. Vertical rhythm between blocks is in rem.
 
 ## Elevation & Depth
 
-Fully flat. There are no shadows, no glow and no overlapping surfaces. The only layering is the status bar, fixed above the content (z-index 1), and it stands apart through its solid green fill, not through elevation.
+Fully flat. There are no shadows, no glow and no overlapping surfaces. Nothing is fixed or layered. The page is one scrolling document.
 
 ### Named Rules
 **The Flat Session Rule.** Separation comes from colour, weight and whitespace. If a new element seems to need a shadow or a panel behind it, set it as plain text instead.
 
 ## Shapes
 
-Square everywhere: zero radius, no borders, no frames. The photo is a plain square (aspect-ratio 1) with no mask, border or filter. The recurring shapes come from characters: the block cursor (0.55em by 0.95em) and the inverted active-window cell in the status bar. The 2px cyan focus ring is the only outline.
+Square everywhere: zero radius, no borders, no frames. The photo is a plain square (aspect-ratio 1) with no mask, border or filter. The recurring shapes come from characters: the block cursor (0.55em by 0.95em) and the `- ` list markers. The 2px cyan focus ring is the only outline.
 
 ## Components
 
@@ -198,9 +174,6 @@ An ordered list. Each entry has a yellow date in a 10ch gutter, then a bright-wh
 ### Cursor
 A solid green block (0.55em by 0.95em) right after the contact email, blinking at 1.06s with `steps(1)`. It stops under `prefers-reduced-motion`. It is the only thing on the page that animates.
 
-### Navigation (tmux status line)
-A fixed 2rem bar on the bottom edge, filled green with bg-coloured label text. It shows `[rdonohue]`, then the windows `0:about`, `1:work` and `2:contact`, then the right-aligned location `"regina, sk"` and a live Regina clock (24h, refreshed every 30s). Windows have 0.5ch of padding. The active window is inverted (bg fill, bold green text) and marked with a trailing `*`, as tmux does. Hover on an inactive window fills it bright green. The active window follows scroll: it is the last section whose top has passed 45% of the viewport, or the last section once the page reaches the bottom. Inside the bar the focus outline switches to bg and is inset by 2px.
-
 ### Photo
 Ryan's own photo (`public/assets/ryan.jpg`, supplied 2026-10-05, shipped unmodified, with an embedded provenance comment), shown plainly as a 320px square (240px on mobile). Treat any replacement the same way: a real photo, unfiltered and unprocessed.
 
@@ -211,11 +184,10 @@ Ryan's own photo (`public/assets/ryan.jpg`, supplied 2026-10-05, shipped unmodif
 
 ### Do:
 - **Do** open new sections with a lowercase `# name` heading: magenta hash, bright-white bold word.
-- **Do** pick colours by role: green for keys, the bar and the cursor; yellow for dates; magenta for the heading hash; cyan for interaction; bright white for bold names and headings.
+- **Do** pick colours by role: green for keys, the cursor and selection; yellow for dates; magenta for the heading hash; cyan for interaction; bright white for bold names and headings.
 - **Do** set rank with Martian Mono's width and weight axes: 112.5% and 760 for headline moments, 87.5% for everything else.
 - **Do** measure horizontal gaps and indents inside content in `ch`.
 - **Do** keep motion instant or stepped, and respect `prefers-reduced-motion`.
-- **Do** add navigation as tmux windows (`n:name`) in the status bar.
 
 ### Don't:
 - **Don't** add a light theme. The world is dark only.

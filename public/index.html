@@ -24,12 +24,10 @@
   --dim: #7d858d;
   --black: #2a2f35;
   --green: #86c39a;
-  --bright-green: #a3d4b2;
   --yellow: #dcbc82;
   --magenta: #d28ad8;
   --cyan: #63d0c4;
   --bright-white: #f5f6f7;
-  --bar: 2rem;
 }
 
 * { box-sizing: border-box; }
@@ -63,11 +61,11 @@ a:hover { color: var(--cyan); text-decoration-color: var(--cyan); }
 :focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
 
 main {
-  padding: 2.5rem clamp(16px, 5vw, 72px) calc(var(--bar) + 4rem);
+  padding: 2.5rem clamp(16px, 5vw, 72px) 5rem;
   max-width: 1100px;
 }
 
-section { margin-top: 5rem; scroll-margin-top: 2rem; }
+section { margin-top: 5rem; }
 section:first-child { margin-top: 0; }
 
 h2 {
@@ -161,39 +159,10 @@ h2 .hash { color: var(--magenta); }
 @keyframes blink { 50% { opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .cursor { animation: none; } }
 
-/* tmux status line */
-.tmux {
-  position: fixed;
-  inset: auto 0 0 0;
-  height: var(--bar);
-  display: flex;
-  align-items: center;
-  gap: 1ch;
-  padding: 0 1ch;
-  background: var(--green);
-  color: var(--bg);
-  font-size: 13px;
-  white-space: nowrap;
-  z-index: 1;
-}
-.tmux a { color: inherit; text-decoration: none; padding: 0 0.5ch; }
-.tmux a::after { content: " "; }
-.tmux a[aria-current]::after { content: "*"; }
-.tmux a[aria-current] { background: var(--bg); color: var(--green); font-weight: 700; }
-.tmux a:hover { color: var(--bg); background: var(--bright-green); }
-.tmux a[aria-current]:hover { color: var(--green); background: var(--bg); }
-.tmux a:focus-visible { outline-color: var(--bg); outline-offset: -2px; }
-.tmux .right { margin-left: auto; }
-
 @media (max-width: 640px) {
   .intro { grid-template-columns: 1fr; }
   .photo { width: 240px; }
   .log > li { grid-template-columns: 1fr; }
-  .tmux { font-size: 12px; font-stretch: 75%; }
-  .tmux .session { display: none; }
-}
-@media (max-width: 400px) {
-  .tmux .loc { display: none; }
 }
 </style>
 </head>
@@ -256,37 +225,5 @@ h2 .hash { color: var(--magenta); }
   </section>
 </main>
 
-<nav class="tmux" aria-label="Sections">
-  <span class="session">[rdonohue]</span>
-  <a href="#about" aria-current="location">0:about</a>
-  <a href="#work">1:work</a>
-  <a href="#contact">2:contact</a>
-  <span class="right"><span class="loc">"regina, sk" </span><time id="clock"></time></span>
-</nav>
-
-<script>
-// Regina skips daylight saving, so this is CST year-round.
-const clock = document.getElementById("clock");
-const fmt = new Intl.DateTimeFormat("en-CA", { timeZone: "America/Regina", hour: "2-digit", minute: "2-digit", hourCycle: "h23" });
-const tick = () => { clock.textContent = fmt.format(new Date()); };
-tick();
-setInterval(tick, 30000);
-
-// Active tmux window: the last section whose top has passed 45% of the
-// viewport, or the last section once the page can't scroll any further.
-const links = document.querySelectorAll(".tmux a");
-const sections = [...document.querySelectorAll("main section")];
-const update = () => {
-  let current = sections[0];
-  for (const s of sections) if (s.getBoundingClientRect().top <= innerHeight * 0.45) current = s;
-  if (innerHeight + scrollY >= document.documentElement.scrollHeight - 2) current = sections.at(-1);
-  for (const a of links) {
-    if (a.hash === "#" + current.id) a.setAttribute("aria-current", "location");
-    else a.removeAttribute("aria-current");
-  }
-};
-addEventListener("scroll", update, { passive: true });
-update();
-</script>
 </body>
 </html>

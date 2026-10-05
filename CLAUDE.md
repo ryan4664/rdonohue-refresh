@@ -8,7 +8,7 @@ Ryan Donohue's personal site. One static page: `public/index.html`, with all CSS
 ## Where the context lives
 
 - `PRODUCT.md`: audience, voice, confirmed facts, and what must never be invented.
-- `DESIGN.md` and `.impeccable/design.json`: the visual system (terminal world: custom ANSI palette, Martian Mono, tmux bar).
+- `DESIGN.md` and `.impeccable/design.json`: the visual system (a light terminal feel: ANSI-role colours and Martian Mono).
 - `.impeccable/surfaces/public-index-html.md`: the page's direction contract.
 - Design work goes through `/impeccable` (e.g. `/impeccable polish public/index.html`).
 
