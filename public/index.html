@@ -23,19 +23,11 @@
   --fg: #d4d7d9;
   --dim: #7d858d;
   --black: #2a2f35;
-  --red: #ef6b5e;
-  --green: #9ad27a;
-  --yellow: #f0c75e;
-  --blue: #6aaeff;
+  --green: #86c39a;
+  --bright-green: #a3d4b2;
+  --yellow: #dcbc82;
   --magenta: #d28ad8;
   --cyan: #63d0c4;
-  --bright-black: #7d858d;
-  --bright-red: #ff8a7f;
-  --bright-green: #b7e69c;
-  --bright-yellow: #ffdb85;
-  --bright-blue: #94c6ff;
-  --bright-magenta: #e7a9ec;
-  --bright-cyan: #8fe5da;
   --bright-white: #f5f6f7;
   --bar: 2rem;
 }
@@ -70,27 +62,24 @@ a {
 a:hover { color: var(--cyan); text-decoration-color: var(--cyan); }
 :focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
 
-.sr-only {
-  position: absolute; width: 1px; height: 1px; overflow: hidden;
-  clip-path: inset(50%); white-space: nowrap;
-}
-
 main {
-  padding: 1.5rem clamp(16px, 5vw, 72px) calc(var(--bar) + 4rem);
+  padding: 2.5rem clamp(16px, 5vw, 72px) calc(var(--bar) + 4rem);
   max-width: 1100px;
 }
 
-section { margin-top: 4.5rem; scroll-margin-top: 1.5rem; }
+section { margin-top: 5rem; scroll-margin-top: 2rem; }
 section:first-child { margin-top: 0; }
 
-.cmd { margin: 0 0 1.25rem; overflow-wrap: break-word; }
-.ps1 { color: var(--green); font-weight: 700; }
-.nw { white-space: nowrap; }
-.ps1 .path { color: var(--blue); }
-.ps1 .sigil { color: var(--fg); font-weight: 400; }
+h2 {
+  margin: 0 0 1.75rem;
+  font-size: 1em;
+  font-weight: 700;
+  color: var(--bright-white);
+}
+h2 .hash { color: var(--magenta); }
 
-/* neofetch */
-.fetch {
+/* intro */
+.intro {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
   gap: 2rem 3.5ch;
@@ -98,23 +87,14 @@ section:first-child { margin-top: 0; }
 }
 
 .photo {
-  position: relative;
-  margin: 0;
+  display: block;
   width: 320px;
+  height: auto;
   aspect-ratio: 1;
 }
-.photo img {
-  position: absolute; inset: 0;
-  width: 100%; height: 100%;
-  display: block;
-}
-.photo .px { image-rendering: pixelated; }
-.photo .hi { opacity: 0; transition: opacity 240ms steps(4, end); }
-.photo:hover .hi { opacity: 1; }
-@media (hover: none) { .photo .hi { opacity: 1; } }
 
 .info h1 {
-  margin: -0.2rem 0 0.4rem;
+  margin: -0.2rem 0 1rem;
   word-spacing: -0.3em;
   font-size: clamp(1.9rem, 1.1rem + 2.6vw, 3.1rem);
   font-stretch: 112.5%;
@@ -123,54 +103,42 @@ section:first-child { margin-top: 0; }
   letter-spacing: -0.02em;
   color: var(--bright-white);
 }
-.info .title { margin: 0; font-weight: 700; }
-.info .title .g { color: var(--green); }
-.info .rule { margin: 0 0 0.6rem; color: var(--dim); }
 
-.info dl { margin: 0; }
+.info dl { margin: 0 0 1.5rem; }
 .info dl div { display: flex; gap: 1ch; }
 .info dt { color: var(--green); font-weight: 700; }
 .info dt::after { content: ":"; color: var(--fg); font-weight: 400; }
 .info dd { margin: 0; }
 
-.swatches {
+.info p { margin: 0 0 1rem; max-width: 62ch; }
+
+/* work log: dates in a fixed gutter */
+.log { margin: 0; padding: 0; list-style: none; max-width: 90ch; }
+.log > li {
   display: grid;
-  grid-template-columns: repeat(8, 3ch);
-  margin-top: 1.1rem;
+  grid-template-columns: 10ch minmax(0, 1fr);
+  gap: 0 2ch;
+  margin-bottom: 2.25rem;
 }
-.swatches span { height: 1.3em; }
-
-/* README */
-.md { max-width: 72ch; }
-.md p { margin: 0 0 1rem; }
-.md code { color: var(--yellow); font-family: inherit; }
-
-/* git log */
-.commit { max-width: 76ch; margin-bottom: 2.25rem; }
-.commit p { margin: 0; }
-.commit .date { white-space: pre-wrap; }
-.commit .head { color: var(--yellow); }
-.commit .refs .tag { color: var(--cyan); font-weight: 700; }
-.commit .refs .branch { color: var(--green); font-weight: 700; }
-.commit .msg { padding-left: 4ch; margin-top: 1.1rem; }
-.commit h3 {
-  margin: 0 0 0.25rem;
+.log .when { color: var(--yellow); }
+.log h3 {
+  margin: 0;
   font-size: 1em;
   font-weight: 700;
   color: var(--bright-white);
 }
-.commit ul { margin: 0.9rem 0 0; padding: 0; list-style: none; }
-.commit li { padding-left: 2ch; text-indent: -2ch; margin-bottom: 0.6rem; }
-.commit li::before { content: "- "; color: var(--dim); }
-
-.oneline { margin: 0; padding: 0; list-style: none; max-width: 90ch; }
-.oneline li { padding-left: 8ch; text-indent: -8ch; margin-bottom: 0.7rem; }
-.oneline .hash { color: var(--yellow); }
-.oneline b { color: var(--bright-white); }
+.log .where { margin: 0; color: var(--dim); }
+.log ul { margin: 0.9rem 0 0; padding: 0; list-style: none; max-width: 72ch; }
+.log ul li { padding-left: 2ch; text-indent: -2ch; margin-bottom: 0.6rem; }
+.log ul li::before { content: "- "; color: var(--dim); }
+.log .past { margin-top: 0; }
+.log .past li::before { content: none; }
+.log .past li { padding-left: 0; text-indent: 0; }
+.log .past b { color: var(--bright-white); }
 
 /* contact */
 .mail {
-  margin: 0 0 2.5rem;
+  margin: 0;
   font-size: clamp(1.5rem, 0.8rem + 2.6vw, 2.9rem);
   font-stretch: 112.5%;
   font-weight: 760;
@@ -183,10 +151,11 @@ section:first-child { margin-top: 0; }
 
 .cursor {
   display: inline-block;
-  width: 1ch;
-  height: 1.25em;
-  vertical-align: text-bottom;
-  background: var(--fg);
+  width: 0.55em;
+  height: 0.95em;
+  margin-left: 0.25ch;
+  vertical-align: -0.1em;
+  background: var(--green);
   animation: blink 1.06s steps(1) infinite;
 }
 @keyframes blink { 50% { opacity: 0; } }
@@ -217,8 +186,9 @@ section:first-child { margin-top: 0; }
 .tmux .right { margin-left: auto; }
 
 @media (max-width: 640px) {
-  .fetch { grid-template-columns: 1fr; }
+  .intro { grid-template-columns: 1fr; }
   .photo { width: 240px; }
+  .log > li { grid-template-columns: 1fr; }
   .tmux { font-size: 12px; font-stretch: 75%; }
   .tmux .session { display: none; }
 }
@@ -229,93 +199,68 @@ section:first-child { margin-top: 0; }
 </head>
 <body>
 <main>
-  <section id="neofetch" aria-labelledby="name">
-    <p class="cmd" aria-hidden="true"><span class="ps1">ryan@rdonohue<span class="sigil">:</span><span class="path">~</span><span class="sigil">$</span></span> neofetch</p>
-    <div class="fetch">
-      <figure class="photo">
-        <img class="px" src="/assets/ryan-px.png" alt="" width="40" height="40">
-        <img class="hi" src="/assets/ryan-cropped-2.jpg" alt="Ryan Donohue" width="800" height="800">
-      </figure>
+  <section id="about" aria-labelledby="name">
+    <div class="intro">
+      <img class="photo" src="/assets/ryan.jpg" alt="Ryan Donohue" width="800" height="800">
       <div class="info">
         <h1 id="name">Ryan Donohue</h1>
-        <p class="title"><span class="g">ryan</span>@<span class="g">rdonohue</span></p>
-        <p class="rule" aria-hidden="true">-------------</p>
         <dl>
           <div><dt>Role</dt><dd>Lead Software Engineer</dd></div>
-          <div><dt>Host</dt><dd>Sticker Mule (remote)</dd></div>
-          <div><dt>Uptime</dt><dd id="uptime">since Apr 2021</dd></div>
+          <div><dt>Company</dt><dd>Sticker Mule</dd></div>
           <div><dt>Location</dt><dd>Regina, Saskatchewan</dd></div>
-          <div><dt>Shell</dt><dd>fullstack</dd></div>
-          <div><dt>Mood</dt><dd>chill</dd></div>
           <div><dt>Email</dt><dd><a href="mailto:ryan@rdonohue.ca">ryan@rdonohue.ca</a></dd></div>
         </dl>
-        <div class="swatches" aria-hidden="true">
-          <span style="background:var(--black)"></span><span style="background:var(--red)"></span><span style="background:var(--green)"></span><span style="background:var(--yellow)"></span><span style="background:var(--blue)"></span><span style="background:var(--magenta)"></span><span style="background:var(--cyan)"></span><span style="background:var(--fg)"></span>
-          <span style="background:var(--bright-black)"></span><span style="background:var(--bright-red)"></span><span style="background:var(--bright-green)"></span><span style="background:var(--bright-yellow)"></span><span style="background:var(--bright-blue)"></span><span style="background:var(--bright-magenta)"></span><span style="background:var(--bright-cyan)"></span><span style="background:var(--bright-white)"></span>
-        </div>
+        <p>I'm a fullstack software developer. These days I build the software behind the printing and shipping at Sticker Mule.</p>
+        <p>Before that: robotics and esports, virtual healthcare, brewery software, and identity management.</p>
       </div>
-    </div>
-  </section>
-
-  <section id="readme">
-    <h2 class="sr-only">About</h2>
-    <p class="cmd" aria-hidden="true"><span class="ps1">ryan@rdonohue<span class="sigil">:</span><span class="path">~</span><span class="sigil">$</span></span> cat README.md</p>
-    <div class="md">
-      <p>I'm a fullstack software developer from Regina, Saskatchewan. These days I build the software behind the printing and shipping at Sticker Mule.</p>
-      <p>Before that: robotics and esports, virtual healthcare, brewery software, and identity management. It's all in <code>git log</code> below.</p>
     </div>
   </section>
 
   <section id="work">
-    <h2 class="sr-only">Work</h2>
-    <p class="cmd" aria-hidden="true"><span class="ps1">ryan@rdonohue<span class="sigil">:</span><span class="path">~</span><span class="sigil">$</span></span> git log <span class="nw">--author="Ryan Donohue"</span></p>
-
-    <article class="commit">
-      <p class="head">commit 9f3c2e1 <span class="refs">(<span class="tag">HEAD -&gt; </span><span class="branch">sticker-mule</span>)</span></p>
-      <p class="date">Date:   Aug 2026</p>
-      <div class="msg">
-        <h3>Lead Software Engineer @ Sticker Mule</h3>
-        <p>Remote.</p>
-      </div>
-    </article>
-
-    <article class="commit">
-      <p class="head">commit 4b7d0a8</p>
-      <p class="date">Date:   Apr 2021</p>
-      <div class="msg">
-        <h3>Software Engineer @ Sticker Mule</h3>
-        <p>Regina, SK.</p>
-        <ul>
-          <li>Led a push across several teams to cut warehouse costs, mostly by fixing how customer orders get collected.</li>
-          <li>Ran the migration of the core business algorithm and tuned it on the way. Production got more efficient and cheaper.</li>
-          <li>Moved a 400-person department onto new infrastructure and code without interrupting their work.</li>
+    <h2><span class="hash" aria-hidden="true"># </span>work</h2>
+    <ol class="log">
+      <li>
+        <span class="when">Aug 2026</span>
+        <div>
+          <h3>Lead Software Engineer @ Sticker Mule</h3>
+          <p class="where">Remote</p>
+        </div>
+      </li>
+      <li>
+        <span class="when">Apr 2021</span>
+        <div>
+          <h3>Software Engineer @ Sticker Mule</h3>
+          <p class="where">Regina, SK</p>
+          <ul>
+            <li>Led a push across several teams to cut warehouse costs, mostly by fixing how customer orders get collected.</li>
+            <li>Ran the migration of the core business algorithm and tuned it on the way. Production got more efficient and cheaper.</li>
+            <li>Moved a 400-person department onto new infrastructure and code without interrupting their work.</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <span class="when">Earlier</span>
+        <ul class="past">
+          <li><b>54e Dev Studios / OneShot Golf</b>: robotics and gaming over in-house real-time video.</li>
+          <li><b>Outpost Health</b>: physician-led virtual healthcare.</li>
+          <li><b>Brew Ninja</b>: brewery software, from costing to regulatory lot tracking.</li>
+          <li><b>Vivvo</b>: identity and access management software.</li>
         </ul>
-      </div>
-    </article>
-
-    <p class="cmd" aria-hidden="true"><span class="ps1">ryan@rdonohue<span class="sigil">:</span><span class="path">~</span><span class="sigil">$</span></span> git log <span class="nw">--oneline</span> <span class="nw">--before=2021-04</span></p>
-    <ul class="oneline">
-      <li><span class="hash">a7c19e0</span> <b>54e Dev Studios / OneShot Golf</b>: robotics and gaming over in-house real-time video.</li>
-      <li><span class="hash">3e88b52</span> <b>Outpost Health</b>: physician-led virtual healthcare.</li>
-      <li><span class="hash">c41d6f9</span> <b>Brew Ninja</b>: brewery software, from costing to regulatory lot tracking.</li>
-      <li><span class="hash">0d2a7b3</span> <b>Vivvo</b>: identity and access management software.</li>
-    </ul>
+      </li>
+    </ol>
   </section>
 
   <section id="contact">
-    <h2 class="sr-only">Contact</h2>
-    <p class="cmd" aria-hidden="true"><span class="ps1">ryan@rdonohue<span class="sigil">:</span><span class="path">~</span><span class="sigil">$</span></span> cat ~/.contact</p>
-    <p class="mail"><a href="mailto:ryan@rdonohue.ca">ryan@rdonohue.ca</a></p>
-    <p class="cmd" aria-hidden="true"><span class="ps1">ryan@rdonohue<span class="sigil">:</span><span class="path">~</span><span class="sigil">$</span></span> <span class="cursor"></span></p>
+    <h2><span class="hash" aria-hidden="true"># </span>contact</h2>
+    <p class="mail"><a href="mailto:ryan@rdonohue.ca">ryan@rdonohue.ca</a><span class="cursor" aria-hidden="true"></span></p>
   </section>
 </main>
 
 <nav class="tmux" aria-label="Sections">
   <span class="session">[rdonohue]</span>
-  <a href="#neofetch" aria-current="location">0:neofetch</a>
-  <a href="#readme">1:readme</a>
-  <a href="#work">2:work</a>
-  <a href="#contact">3:contact</a>
+  <a href="#about" aria-current="location">0:about</a>
+  <a href="#work">1:work</a>
+  <a href="#contact">2:contact</a>
   <span class="right"><span class="loc">"regina, sk" </span><time id="clock"></time></span>
 </nav>
 
@@ -326,10 +271,6 @@ const fmt = new Intl.DateTimeFormat("en-CA", { timeZone: "America/Regina", hour:
 const tick = () => { clock.textContent = fmt.format(new Date()); };
 tick();
 setInterval(tick, 30000);
-
-const now = new Date();
-const months = (now.getFullYear() - 2021) * 12 + now.getMonth() - 3;
-document.getElementById("uptime").textContent = `${Math.floor(months / 12)} years, ${months % 12} months`;
 
 // Active tmux window: the last section whose top has passed 45% of the
 // viewport, or the last section once the page can't scroll any further.

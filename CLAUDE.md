@@ -17,7 +17,7 @@ Ryan Donohue's personal site. One static page: `public/index.html`, with all CSS
 - Voice: a developer's site. No LinkedIn language.
 - Never invent roles, dates, metrics or links. Titles and dates for the pre-2021 roles are unknown.
 - Contact is a mailto link to ryan@rdonohue.ca. No form, no backend.
-- Nobody should ever have to type a command on the page. Everything is printed, and links are plain links.
+- Keep the terminal feel subtle: no shell prompts, commands, neofetch or image effects (Ryan dialed these back on 2026-10-05).
 
 ## Deploy
 

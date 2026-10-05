@@ -29,13 +29,13 @@ It's Ryan's own site, built by him and written the way a developer talks. A Link
 ## Brand Commitments
 
 - Name: Ryan Donohue. Domain: rdonohue.ca.
-- Ryan's headshot (`public/assets/ryan-cropped-2.jpg`) must stay on the site.
+- Ryan's headshot (`public/assets/ryan.jpg`, supplied 2026-10-05) must stay on the site.
 - The older roles stay too, reworded in the site's voice.
 - Voice: very much a developer's website. Plain, direct and specific. No LinkedIn language: no "passionate", "results-driven", "leveraging", buzzword bios or corporate self-promotion.
 
 ## Evidence on Hand
 
-- Photo: `public/assets/ryan-cropped-2.jpg`, plus `ryan-px.png`, its 40x40 downscale. Ryan had the older photos and company logos removed on 2026-10-04; they're still in git history.
+- Photo: `public/assets/ryan.jpg`, supplied by Ryan on 2026-10-05. Older photos and company logos were removed at his request; they're still in git history.
 - **Sticker Mule** (current, permanent full-time): Software Engineer since Apr 2021 in Regina, SK; Lead Software Engineer since Aug 2026, remote. Per his LinkedIn, he:
   - led a cross-team cost-cutting initiative on warehouse operations and how customer orders get collected;
   - managed the migration and optimization of the core business algorithm, which made production more efficient and cut costs;

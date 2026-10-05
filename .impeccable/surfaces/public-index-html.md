@@ -9,20 +9,20 @@ related_targets: []
 
 Scope: the whole single page at `public/index.html`. Mode: Read (visitor's success = knows who Ryan is, what he's worked on, how to reach him).
 
-Constraints: email link only (ryan@rdonohue.ca), no backend. Nobody ever has to type a command; everything is printed and every link is a plain link. User ruled out "too stiff" and "too flashy". Photo `ryan-cropped-2.jpg` stays. Dark only: the user pinned a terminal world, and terminals are dark.
+Constraints: email link only (ryan@rdonohue.ca), no backend. No commands, prompts or neofetch on the page; Ryan asked to dial the terminal back (2026-10-05). Ryan ruled out "too stiff" and "too flashy". Photo is `public/assets/ryan.jpg`, shown plainly with no effects. Dark only.
 
 Unresolved: titles and dates for the pre-2021 roles are unknown. Show them without dates and never invent any.
 
 ## Direction contract
 
-THESIS: The page is Ryan's terminal scrollback. Each section is a command and its real output (neofetch, cat README.md, git log, cat ~/.contact), with a tmux status bar as navigation. It refuses the dev-portfolio default (centred hero, cards, skill badges) and the fake-shell gimmick where visitors have to type.
+THESIS: A developer's page with a terminal feel, dialed back. Monospace, ANSI role colours, `# section` headings, a dated work log and a tmux status bar carry the vibe; there are no shell prompts or commands. It refuses the dev-portfolio default (centred hero, cards, skill badges) and terminal cosplay.
 
-OWN-WORLD: Custom 16-colour ANSI theme on #0d0f11: fg #d4d7d9, dim #7d858d, green #9ad27a (prompts, tmux field), yellow #f0c75e (hashes, dates), cyan #63d0c4 (refs, link hover), red/blue/magenta for swatches and syntax roles only. Martian Mono variable; the width axis carries rank (112.5 bold for names, ~87.5 for running text). No glow, no window chrome, no traffic lights.
+OWN-WORLD: ANSI roles on #0d0f11: fg #d4d7d9, dim #7d858d, green #9ad27a (keys, tmux field, cursor), yellow #f0c75e (dates), magenta #d28ad8 (heading hash), cyan #63d0c4 (link hover, focus), bright-white #f5f6f7 (names, headings). Martian Mono variable; the width axis carries rank (112.5 bold for display, 87.5 for running text). Flat and square: no glow, no window chrome, no shadows.
 
-STORY: neofetch gives who-at-a-glance, README gives Ryan in plain dev voice, git log shows Sticker Mule as HEAD followed by older roles as oneline commits, and the visitor leaves with the email.
+STORY: Intro (photo, name, key: value facts, a two-line bio), then `# work` (Sticker Mule roles with dates, then earlier companies), then `# contact`, which ends on the email with a blinking cursor.
 
-FIRST VIEWPORT: `ryan@rdonohue:~$ neofetch` top-left. Photo as half-block pixels (~320px) on the left; info on the right (name expanded bold, a rule, green keys, email included), with ANSI swatches below. `$ cat README.md` begins near the fold. A green tmux bar is fixed at the bottom with window links and Regina local time.
+FIRST VIEWPORT: Photo at 320px top-left; to its right the name in expanded bold, a green-keyed list (role, company, location, email), and the short bio. `# work` begins near the fold. A green tmux bar is fixed at the bottom (0:about 1:work 2:contact) with Regina local time.
 
-FORM: Terminal Session, user-pinned by steer after two re-rolls (not from the ordered list); seed key 9310aebd. Signature interaction: the half-block photo resolves to the real photo on hover (touch devices show the real photo outright), and the tmux active window tracks scroll. Motion: instant like a terminal; only the cursor blinks, and not under reduced motion.
+FORM: Terminal Session, user-pinned by steer after two re-rolls, then dialed back at Ryan's request on 2026-10-05 (no commands, neofetch, pixel photo or swatches); seed key 9310aebd. Signature: the tmux bar tracks scroll, and a block cursor blinks after the contact email. Motion: only the cursor blinks, and not under reduced motion.
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
