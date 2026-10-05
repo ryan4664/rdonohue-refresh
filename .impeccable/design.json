@@ -1,0 +1,477 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-05T03:46:58+00:00",
+  "title": "Design System: rdonohue.ca",
+  "extensions": {
+    "colorMeta": {
+      "bg": {
+        "role": "neutral",
+        "displayName": "Scrollback Black",
+        "canonical": "oklch(16.7% 0.005 248.1)",
+        "tonalRamp": [
+          "#090b0d",
+          "#232528",
+          "#404245",
+          "#5f6164",
+          "#808385",
+          "#a2a5a8",
+          "#c6c9cc",
+          "#eceff2"
+        ]
+      },
+      "fg": {
+        "role": "neutral",
+        "displayName": "Terminal Grey",
+        "canonical": "oklch(87.7% 0.004 236.5)",
+        "tonalRamp": [
+          "#090b0d",
+          "#232527",
+          "#404244",
+          "#5f6263",
+          "#808384",
+          "#a3a5a7",
+          "#c7cacb",
+          "#eceff1"
+        ]
+      },
+      "dim": {
+        "role": "neutral",
+        "displayName": "Comment Grey",
+        "canonical": "oklch(61.3% 0.015 248.1)",
+        "tonalRamp": [
+          "#060c11",
+          "#1f262c",
+          "#3c434a",
+          "#5b626a",
+          "#7b838b",
+          "#9ea6ae",
+          "#c2cad3",
+          "#e7f0f9"
+        ]
+      },
+      "black": {
+        "role": "neutral",
+        "displayName": "Ansi Black",
+        "canonical": "oklch(30.3% 0.013 253.0)",
+        "tonalRamp": [
+          "#070c11",
+          "#21262b",
+          "#3d4349",
+          "#5c6269",
+          "#7d838a",
+          "#9fa6ad",
+          "#c3cad2",
+          "#e9eff7"
+        ]
+      },
+      "red": {
+        "role": "swatch",
+        "displayName": "Ansi Red",
+        "canonical": "oklch(68.6% 0.166 27.9)",
+        "tonalRamp": [
+          "#2d0000",
+          "#510000",
+          "#751f1a",
+          "#ab2b25",
+          "#d35247",
+          "#fc7669",
+          "#ff9b8b",
+          "#ffcfc2"
+        ]
+      },
+      "green": {
+        "role": "primary",
+        "displayName": "Prompt Green",
+        "canonical": "oklch(80.4% 0.131 134.9)",
+        "tonalRamp": [
+          "#001300",
+          "#013000",
+          "#224f00",
+          "#3e7116",
+          "#5e933d",
+          "#80b760",
+          "#a4dc84",
+          "#ccffaf"
+        ]
+      },
+      "yellow": {
+        "role": "secondary",
+        "displayName": "Hash Yellow",
+        "canonical": "oklch(84.5% 0.131 88.0)",
+        "tonalRamp": [
+          "#1f0100",
+          "#3d1c00",
+          "#5c3b00",
+          "#805a00",
+          "#a37c00",
+          "#c79f31",
+          "#edc45b",
+          "#ffea8d"
+        ]
+      },
+      "blue": {
+        "role": "tertiary",
+        "displayName": "Path Blue",
+        "canonical": "oklch(74.0% 0.137 253.8)",
+        "tonalRamp": [
+          "#00003b",
+          "#00215d",
+          "#00417f",
+          "#1c61ac",
+          "#4184d2",
+          "#64a8f9",
+          "#88cdff",
+          "#b6f3ff"
+        ]
+      },
+      "magenta": {
+        "role": "swatch",
+        "displayName": "Ansi Magenta",
+        "canonical": "oklch(73.3% 0.134 324.1)",
+        "tonalRamp": [
+          "#200026",
+          "#3f0245",
+          "#602665",
+          "#85428b",
+          "#a964af",
+          "#ce86d4",
+          "#f4aafa",
+          "#ffd3ff"
+        ]
+      },
+      "cyan": {
+        "role": "tertiary",
+        "displayName": "Ref Cyan",
+        "canonical": "oklch(79.0% 0.102 185.8)",
+        "tonalRamp": [
+          "#001511",
+          "#00332c",
+          "#00524a",
+          "#00736a",
+          "#18968b",
+          "#4bbaae",
+          "#73dfd3",
+          "#99fff8"
+        ]
+      },
+      "bright-black": {
+        "role": "neutral",
+        "displayName": "Comment Grey (bright black alias)",
+        "canonical": "oklch(61.3% 0.015 248.1)",
+        "tonalRamp": [
+          "#060c11",
+          "#1f262c",
+          "#3c434a",
+          "#5b626a",
+          "#7b838b",
+          "#9ea6ae",
+          "#c2cad3",
+          "#e7f0f9"
+        ]
+      },
+      "bright-red": {
+        "role": "swatch",
+        "displayName": "Bright Red",
+        "canonical": "oklch(75.9% 0.144 26.6)",
+        "tonalRamp": [
+          "#2d0000",
+          "#510000",
+          "#751f1c",
+          "#a33732",
+          "#ca5b52",
+          "#f27e74",
+          "#ffa296",
+          "#ffcfc4"
+        ]
+      },
+      "bright-green": {
+        "role": "primary",
+        "displayName": "Bright Green (tmux hover)",
+        "canonical": "oklch(87.4% 0.110 134.6)",
+        "tonalRamp": [
+          "#001200",
+          "#072f00",
+          "#264e00",
+          "#456e29",
+          "#66914b",
+          "#88b46d",
+          "#abd990",
+          "#d0ffb4"
+        ]
+      },
+      "bright-yellow": {
+        "role": "swatch",
+        "displayName": "Bright Yellow",
+        "canonical": "oklch(90.4% 0.113 87.4)",
+        "tonalRamp": [
+          "#1e0200",
+          "#3c1d00",
+          "#5b3c00",
+          "#7c5c00",
+          "#9f7d21",
+          "#c3a04a",
+          "#e8c56f",
+          "#ffea94"
+        ]
+      },
+      "bright-blue": {
+        "role": "swatch",
+        "displayName": "Bright Blue",
+        "canonical": "oklch(81.3% 0.097 252.2)",
+        "tonalRamp": [
+          "#000532",
+          "#002452",
+          "#134373",
+          "#356496",
+          "#5686bb",
+          "#78a9e0",
+          "#9bceff",
+          "#c0f3ff"
+        ]
+      },
+      "bright-magenta": {
+        "role": "swatch",
+        "displayName": "Bright Magenta",
+        "canonical": "oklch(81.4% 0.114 324.0)",
+        "tonalRamp": [
+          "#1f0025",
+          "#3e0643",
+          "#5e2863",
+          "#804885",
+          "#a46aa9",
+          "#c88ccd",
+          "#eeb0f3",
+          "#ffd5ff"
+        ]
+      },
+      "bright-cyan": {
+        "role": "swatch",
+        "displayName": "Bright Cyan",
+        "canonical": "oklch(86.4% 0.085 185.5)",
+        "tonalRamp": [
+          "#001410",
+          "#00312b",
+          "#005048",
+          "#077168",
+          "#3b9389",
+          "#61b7ac",
+          "#86dcd1",
+          "#abfff6"
+        ]
+      },
+      "bright-white": {
+        "role": "neutral",
+        "displayName": "Bold White",
+        "canonical": "oklch(97.3% 0.002 247.8)",
+        "tonalRamp": [
+          "#0b0b0c",
+          "#242526",
+          "#414243",
+          "#606162",
+          "#818283",
+          "#a4a5a6",
+          "#c8c9ca",
+          "#edeeef"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Ryan's name in the neofetch block only. Word-spacing -0.3em."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "The contact email under cat ~/.contact."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Bold body-size emphasis: prompt user@host, neofetch keys, commit headings, refs."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All running text; prose 72ch, commits 76ch, oneline 90ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "tmux status line; 12px at 75% width at 640px and below."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "cursor-blink",
+        "value": "1.06s steps(1) infinite",
+        "purpose": "Block cursor blink; disabled under prefers-reduced-motion."
+      },
+      {
+        "name": "photo-resolve",
+        "value": "opacity 240ms steps(4, end)",
+        "purpose": "Pixel portrait resolving to the real photo on hover, in four stepped frames."
+      },
+      {
+        "name": "instant",
+        "value": "none",
+        "purpose": "Every other state change (link hover, tmux window) is instant."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "narrow",
+        "value": "640px",
+        "purpose": "neofetch stacks, portrait 240px, tmux 12px/75% width, session name hidden"
+      },
+      {
+        "name": "tiny",
+        "value": "400px",
+        "purpose": "tmux location hidden"
+      }
+    ],
+    "assets": [
+      {
+        "path": "public/assets/ryan-cropped-2.jpg",
+        "provenance": "Ryan Donohue's own pre-existing photo, shipped unmodified."
+      },
+      {
+        "path": "public/assets/ryan-px.png",
+        "provenance": "40x40 downscale of ryan-cropped-2.jpg via `sips -s format png -z 40 40`; rendered image-rendering: pixelated at 320px (8x) desktop, 240px (6x) mobile."
+      },
+      {
+        "path": "public/fonts/martian-mono.woff2",
+        "provenance": "Self-hosted Martian Mono variable font (wght 100-800, wdth 75-112.5)."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Prompt line",
+      "kind": "custom",
+      "refersTo": "prompt",
+      "description": "Section header: user@host bold green, path blue, sigils regular fg, then the command.",
+      "html": "<p class=\"ds-cmd\"><span class=\"ds-ps1\">ryan@rdonohue<span class=\"ds-sigil\">:</span><span class=\"ds-path\">~</span><span class=\"ds-sigil\">$</span></span> git log <span class=\"ds-nw\">--oneline</span></p>",
+      "css": ":host{--bg:#0d0f11;--fg:#d4d7d9;--dim:#7d858d;--green:#9ad27a;--bright-green:#b7e69c;--yellow:#f0c75e;--cyan:#63d0c4;--blue:#6aaeff;--bright-white:#f5f6f7;}.ds-cmd{font-family:'Martian Mono',ui-monospace,Menlo,monospace;font-stretch:87.5%;margin:0;background:#0d0f11;color:#d4d7d9;font-size:15px;line-height:1.65;padding:12px;}.ds-ps1{color:#9ad27a;font-weight:700;}.ds-path{color:#6aaeff;}.ds-sigil{color:#d4d7d9;font-weight:400;}.ds-nw{white-space:nowrap;}"
+    },
+    {
+      "name": "Link",
+      "kind": "custom",
+      "refersTo": "link",
+      "description": "Inherits text colour with a dim offset underline; cyan on hover; cyan 2px focus ring.",
+      "html": "<p class=\"ds-p\">Email: <a class=\"ds-link\" href=\"#\">ryan@rdonohue.ca</a></p>",
+      "css": ".ds-p{font-family:'Martian Mono',ui-monospace,Menlo,monospace;font-stretch:87.5%;margin:0;padding:12px;background:#0d0f11;color:#d4d7d9;font-size:15px;}.ds-link{color:inherit;text-decoration:underline;text-decoration-color:#7d858d;text-underline-offset:0.25em;}.ds-link:hover{color:#63d0c4;text-decoration-color:#63d0c4;}.ds-link:focus-visible{outline:2px solid #63d0c4;outline-offset:3px;}"
+    },
+    {
+      "name": "Mail link (display)",
+      "kind": "custom",
+      "refersTo": "mail-link",
+      "description": "The contact email at headline size, widest and heaviest cut, bright white.",
+      "html": "<p class=\"ds-mail\"><a href=\"#\">ryan@rdonohue.ca</a></p>",
+      "css": ".ds-mail{font-family:'Martian Mono',ui-monospace,Menlo,monospace;margin:0;padding:12px;background:#0d0f11;font-size:clamp(1.5rem,0.8rem + 2.6vw,2.9rem);font-stretch:112.5%;font-weight:760;line-height:1.1;letter-spacing:-0.02em;overflow-wrap:anywhere;}.ds-mail a{color:#f5f6f7;text-decoration:underline;text-decoration-color:#7d858d;text-decoration-thickness:0.06em;text-underline-offset:0.25em;}.ds-mail a:hover{color:#63d0c4;text-decoration-color:#63d0c4;}.ds-mail a:focus-visible{outline:2px solid #63d0c4;outline-offset:3px;}"
+    },
+    {
+      "name": "tmux status line",
+      "kind": "nav",
+      "refersTo": "tmux-bar",
+      "description": "Green bottom bar; windows as plain links; active window inverted with a trailing *; Regina clock on the right.",
+      "html": "<nav class=\"ds-tmux\"><span>[rdonohue]</span><a href=\"#\" aria-current=\"location\">0:neofetch</a><a href=\"#\">1:readme</a><a href=\"#\">2:work</a><a href=\"#\">3:contact</a><span class=\"ds-right\">\"regina, sk\" 21:40</span></nav>",
+      "css": ".ds-tmux{font-family:'Martian Mono',ui-monospace,Menlo,monospace;font-stretch:87.5%;display:flex;align-items:center;gap:1ch;height:2rem;padding:0 1ch;background:#9ad27a;color:#0d0f11;font-size:13px;white-space:nowrap;}.ds-tmux a{color:inherit;text-decoration:none;padding:0 0.5ch;}.ds-tmux a::after{content:\" \";}.ds-tmux a[aria-current]::after{content:\"*\";}.ds-tmux a[aria-current]{background:#0d0f11;color:#9ad27a;font-weight:700;}.ds-tmux a:hover{background:#b7e69c;color:#0d0f11;}.ds-tmux a[aria-current]:hover{background:#0d0f11;color:#9ad27a;}.ds-tmux a:focus-visible{outline:2px solid #0d0f11;outline-offset:-2px;}.ds-right{margin-left:auto;}"
+    },
+    {
+      "name": "Neofetch info",
+      "kind": "custom",
+      "description": "Name in display type, green user@host, dim dash rule, bold green keys with fg colons, 16-cell ANSI swatch strip.",
+      "html": "<div class=\"ds-info\"><h1>Ryan Donohue</h1><p class=\"ds-t\"><span class=\"g\">ryan</span>@<span class=\"g\">rdonohue</span></p><p class=\"ds-rule\">-------------</p><dl><div><dt>Role</dt><dd>Lead Software Engineer</dd></div><div><dt>Shell</dt><dd>fullstack</dd></div></dl><div class=\"ds-sw\"><span style=\"background:#2a2f35\"></span><span style=\"background:#ef6b5e\"></span><span style=\"background:#9ad27a\"></span><span style=\"background:#f0c75e\"></span><span style=\"background:#6aaeff\"></span><span style=\"background:#d28ad8\"></span><span style=\"background:#63d0c4\"></span><span style=\"background:#d4d7d9\"></span><span style=\"background:#7d858d\"></span><span style=\"background:#ff8a7f\"></span><span style=\"background:#b7e69c\"></span><span style=\"background:#ffdb85\"></span><span style=\"background:#94c6ff\"></span><span style=\"background:#e7a9ec\"></span><span style=\"background:#8fe5da\"></span><span style=\"background:#f5f6f7\"></span></div></div>",
+      "css": ".ds-info{font-family:'Martian Mono',ui-monospace,Menlo,monospace;font-stretch:87.5%;padding:16px;background:#0d0f11;color:#d4d7d9;font-size:15px;line-height:1.65;}.ds-info h1{margin:0 0 0.4rem;font-size:clamp(1.9rem,1.1rem + 2.6vw,3.1rem);font-stretch:112.5%;font-weight:760;line-height:1.05;letter-spacing:-0.02em;word-spacing:-0.3em;color:#f5f6f7;}.ds-t{margin:0;font-weight:700;}.ds-t .g{color:#9ad27a;}.ds-rule{margin:0 0 0.6rem;color:#7d858d;}.ds-info dl{margin:0;}.ds-info dl div{display:flex;gap:1ch;}.ds-info dt{color:#9ad27a;font-weight:700;}.ds-info dt::after{content:\":\";color:#d4d7d9;font-weight:400;}.ds-info dd{margin:0;}.ds-sw{display:grid;grid-template-columns:repeat(8,3ch);margin-top:1.1rem;}.ds-sw span{height:1.3em;}"
+    },
+    {
+      "name": "Commit entry",
+      "kind": "card",
+      "description": "git log entry: yellow header with cyan/green refs, Date line, 4ch-indented message with bright-white heading and hanging-indent dash list.",
+      "html": "<article class=\"ds-commit\"><p class=\"ds-head\">commit 9f3c2e1 (<span class=\"ds-tag\">HEAD -&gt; </span><span class=\"ds-branch\">sticker-mule</span>)</p><p class=\"ds-date\">Date:   Aug 2026</p><div class=\"ds-msg\"><h3>Lead Software Engineer @ Sticker Mule</h3><p>Remote.</p><ul><li>Moved a 400-person department onto new infrastructure without interrupting their work.</li></ul></div></article>",
+      "css": ".ds-commit{font-family:'Martian Mono',ui-monospace,Menlo,monospace;font-stretch:87.5%;max-width:76ch;padding:16px;background:#0d0f11;color:#d4d7d9;font-size:15px;line-height:1.65;}.ds-commit p{margin:0;}.ds-head{color:#f0c75e;}.ds-tag{color:#63d0c4;font-weight:700;}.ds-branch{color:#9ad27a;font-weight:700;}.ds-date{white-space:pre-wrap;}.ds-msg{padding-left:4ch;margin-top:1.1rem;}.ds-msg h3{margin:0 0 0.25rem;font-size:1em;font-weight:700;color:#f5f6f7;}.ds-msg ul{margin:0.9rem 0 0;padding:0;list-style:none;}.ds-msg li{padding-left:2ch;text-indent:-2ch;margin-bottom:0.6rem;}.ds-msg li::before{content:\"- \";color:#7d858d;}"
+    },
+    {
+      "name": "Oneline log",
+      "kind": "custom",
+      "description": "Older roles: yellow hash, bright-white company, plain description, 8ch hanging indent.",
+      "html": "<ul class=\"ds-one\"><li><span class=\"h\">3e88b52</span> <b>Outpost Health</b>: physician-led virtual healthcare.</li><li><span class=\"h\">c41d6f9</span> <b>Brew Ninja</b>: brewery software, from costing to regulatory lot tracking.</li></ul>",
+      "css": ".ds-one{font-family:'Martian Mono',ui-monospace,Menlo,monospace;font-stretch:87.5%;margin:0;padding:16px;list-style:none;max-width:90ch;background:#0d0f11;color:#d4d7d9;font-size:15px;line-height:1.65;}.ds-one li{padding-left:8ch;text-indent:-8ch;margin-bottom:0.7rem;}.ds-one .h{color:#f0c75e;}.ds-one b{color:#f5f6f7;}"
+    },
+    {
+      "name": "Cursor",
+      "kind": "custom",
+      "refersTo": "cursor",
+      "description": "Block cursor at the final prompt; the only continuous animation; stops under reduced motion.",
+      "html": "<p class=\"ds-cur\"><span class=\"p\">ryan@rdonohue:~$</span> <span class=\"c\"></span></p>",
+      "css": ".ds-cur{font-family:'Martian Mono',ui-monospace,Menlo,monospace;font-stretch:87.5%;margin:0;padding:12px;background:#0d0f11;color:#d4d7d9;font-size:15px;}.ds-cur .p{color:#9ad27a;font-weight:700;}.ds-cur .c{display:inline-block;width:1ch;height:1.25em;vertical-align:text-bottom;background:#d4d7d9;animation:ds-blink 1.06s steps(1) infinite;}@keyframes ds-blink{50%{opacity:0;}}@media (prefers-reduced-motion:reduce){.ds-cur .c{animation:none;}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Scrollback",
+    "overview": "The page is Ryan's terminal after he has run a few commands: a prompt, then the real output, then the next prompt. Every section is a command and what it printed (neofetch, `cat README.md`, `git log`, `cat ~/.contact`), and a tmux status line pinned to the bottom does the navigating. Nobody types anything. Everything is already printed, and every link is a plain link.\n\nIt is a dense, quiet, single-column world on near-black. One monospace family does all the work, and rank comes from the variable font's width and weight axes, not from a second face or a size jump. Colour comes from a custom 16-colour ANSI theme, and each hue keeps the job a terminal would give it. There are no surfaces, cards, shadows or rounded corners. The character grid is the layout.\n\nThe user set two limits: not too stiff and not too flashy. The terminal has no glow, no window chrome and no traffic-light buttons. It fills the viewport like a fullscreen session, not a screenshot of an app.",
+    "keyCharacteristics": [
+      "Dark only. The world is a terminal, and terminals are dark.",
+      "One family (Martian Mono, variable). The width axis carries rank.",
+      "Colour by ANSI role, never as decoration.",
+      "Flat, square and borderless. Spacing is measured in `ch`.",
+      "Motion is instant or stepped. Only the cursor blinks."
+    ],
+    "rules": [
+      {
+        "name": "The ANSI Roles Rule",
+        "body": "A hue is used only for the job a terminal gives it: green for the shell and prompt, yellow for hashes, cyan for refs and interaction, bright white for bold names. Red and magenta stay in the swatch row until a real role (an error, a diff) needs them.",
+        "section": "colors"
+      },
+      {
+        "name": "The Dark Only Rule",
+        "body": "There is no light theme. `color-scheme: dark` and the bg colour are the only canvas.",
+        "section": "colors"
+      },
+      {
+        "name": "The Width Is Rank Rule",
+        "body": "Rank comes from the width and weight axes, not from new faces: 112.5/760 for the name and email, 87.5/700 for keys and headings, 87.5/400 for text, and 75 only where the status bar runs out of room. Never add a second family.",
+        "section": "typography"
+      },
+      {
+        "name": "The No Uppercase Rule",
+        "body": "Nothing is uppercased or letter-spaced for effect. Case and spacing are whatever the command would print.",
+        "section": "typography"
+      },
+      {
+        "name": "The Character Grid Rule",
+        "body": "Inside terminal output, horizontal measures are in `ch`. Vertical rhythm between blocks is in rem.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat Scrollback Rule",
+        "body": "Separation comes from colour, weight and whitespace. If a new element seems to need a shadow or a panel behind it, it should be printed output instead.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Instant Terminal Rule",
+        "body": "State changes are instant or stepped, never eased. Only the cursor blinks, and not under reduced motion.",
+        "section": "components"
+      },
+      {
+        "name": "The Printed Not Typed Rule",
+        "body": "Commands are shown already run, with their output. Never ask a visitor to type or wait for an input.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "**Do** frame new content as a real command and its real output, with a prompt line above it.",
+      "**Do** pick colours by ANSI role: green for shell and keys, yellow for hashes and dates, cyan for refs and interaction, bright white for bold names.",
+      "**Do** set rank with Martian Mono's width and weight axes: 112.5% and 760 for headline moments, 87.5% for everything else.",
+      "**Do** measure indents and gaps inside output in `ch`.",
+      "**Do** keep motion instant or stepped, and respect `prefers-reduced-motion`.",
+      "**Do** scale pixel images by whole numbers only, with `image-rendering: pixelated`."
+    ],
+    "donts": [
+      "**Don't** add a light theme. The world is dark only.",
+      "**Don't** add glow, scanlines, window chrome or traffic-light buttons. The session is fullscreen and plain.",
+      "**Don't** introduce cards, panels, shadows, rounded corners or skill badges.",
+      "**Don't** add a second typeface or uppercase tracked labels.",
+      "**Don't** make visitors type commands to reach content.",
+      "**Don't** use red or magenta decoratively. Outside the swatch strip they wait for a real terminal role."
+    ]
+  }
+}
